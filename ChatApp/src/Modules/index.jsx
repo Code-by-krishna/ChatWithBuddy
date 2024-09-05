@@ -20,7 +20,7 @@ function Form({ isSignInPage = false }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch(`http://localhost:5000/auth/${isSignInPage ? 'login' : 'register'}`, {
+    const response = await fetch(`https://chatwithbuddy-chatappserver.onrender.com/auth/${isSignInPage ? 'login' : 'register'}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

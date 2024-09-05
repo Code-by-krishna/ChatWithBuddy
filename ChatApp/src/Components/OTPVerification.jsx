@@ -27,7 +27,7 @@ const OTPVerification = () => {
 
         if (enteredOtp.length === 6) {
             console.log("Entered OTP is:", enteredOtp);
-            const response = await fetch('http://localhost:5000/auth/verify-otp', {
+            const response = await fetch('https://chatwithbuddy-chatappserver.onrender.com/auth/verify-otp', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

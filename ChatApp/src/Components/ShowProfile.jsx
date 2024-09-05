@@ -15,7 +15,7 @@ const ShowProfile = () => {
   }
 
   const userAvatar = adminProfile?.avatar;
-  const avatarUrl = userAvatar ? `http://localhost:5000/uploads/${userAvatar}` : defaultAvatar;
+  const avatarUrl = userAvatar ? `https://chatwithbuddy-chatappserver.onrender.com/uploads/${userAvatar}` : defaultAvatar;
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-100 to-gray-300 flex items-center justify-center p-6">

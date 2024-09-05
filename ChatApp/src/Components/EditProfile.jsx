@@ -33,7 +33,7 @@ export default function EditProfile() {
         formData.append('loginuserEmail', userData.loginuserEmail);
 
         try {
-            const response = await fetch(`http://localhost:5000/user/edit/profile`, {
+            const response = await fetch(`https://chatwithbuddy-chatappserver.onrender.com/user/edit/profile`, {
                 method: "POST",
                 body: formData,
             });

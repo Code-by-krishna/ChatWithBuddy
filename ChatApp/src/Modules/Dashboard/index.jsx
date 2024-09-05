@@ -46,7 +46,7 @@ const Dashboard = () => {
     useEffect(() => {
         const LoggedInUser = JSON.parse(localStorage.getItem("user:detail"));
         const fetchConversations = async () => {
-            const result = await fetch(`http://localhost:5000/user/conversation/${LoggedInUser?.id}`, {
+            const result = await fetch(`https://chatwithbuddy-chatappserver.onrender.com/user/conversation/${LoggedInUser?.id}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -61,7 +61,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         const fetchUsers = async () => {
-            const res = await fetch(`http://localhost:5000/allUser/${user?.id}`, {
+            const res = await fetch(`https://chatwithbuddy-chatappserver.onrender.com/allUser/${user?.id}`, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json',
@@ -75,7 +75,7 @@ const Dashboard = () => {
     }, [])
 
     const fetchMessages = async (conversationId, receiver) => {
-        const response = await fetch(`http://localhost:5000/user/message/${conversationId}?senderId=${user?.id}&&receiverId=${receiver?.receiverId}`,
+        const response = await fetch(`https://chatwithbuddy-chatappserver.onrender.com/user/message/${conversationId}?senderId=${user?.id}&&receiverId=${receiver?.receiverId}`,
             {
                 method: "GET",
                 headers: {
@@ -96,7 +96,7 @@ const Dashboard = () => {
             message
         }
         )
-        const res = await fetch(`http://localhost:5000/user/message`, {
+        const res = await fetch(`https://chatwithbuddy-chatappserver.onrender.com/user/message`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -109,7 +109,7 @@ const Dashboard = () => {
     }
 
     const userAvatar = user?.avatar;
-    const avatarUrl = userAvatar ? `http://localhost:5000/uploads/${userAvatar}` : defaultAvatar;
+    const avatarUrl = userAvatar ? `https://chatwithbuddy-chatappserver.onrender.com/uploads/${userAvatar}` : defaultAvatar;
 
 
     return (
