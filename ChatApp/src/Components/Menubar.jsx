@@ -16,7 +16,7 @@ export default function Menubar() {
   return (
     <Menu as="div" className="relative inline-block text-left">
       <div>
-        <MenuButton className="inline-flex w-full justify-center gap-x-1.5 rounded-full bg-blue-400 p-3 text-sm font-semibold text-gray-900 ">
+        <MenuButton className="inline-flex w-full gap-x-1.5 rounded-full bg-blue-400 p-3 text-sm font-semibold text-gray-900 ">
           <ChevronDownIcon aria-hidden="true" className="-mr-1 h-5 w-5 text-white" />
         </MenuButton>
       </div>

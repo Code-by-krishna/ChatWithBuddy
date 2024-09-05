@@ -128,13 +128,13 @@ const Dashboard = () => {
                 <hr />
                 <div className="mx-10" >
                     <div className="text-blue-600 text-xl">Conversations</div>
-                    <div className="mt-4 ">
+                    <div className="mt-3 ">
                         {
                             conversations.length > 0 ?
                                 conversations.map(({ conversationId, user }) => {
                                     return (
                                         <div className="flex pb-4 mb-3 border-b border-b-gray-300 hover:bg-zinc-300">
-                                            <div className="cursor-pointer flex items-center" onClick={() => fetchMessages(conversationId, user)}>
+                                            <div className="cursor-pointer flex items-center mt-2 ml-2" onClick={() => fetchMessages(conversationId, user)}>
                                                 <img className="w-[39px] h-[39px] object-cover rounded-full border-1 border-gradient-to-r from-teal-400 to-blue-500 shadow-lg" src={img1} alt="user image"/>
                                                 <div className="mx-4">
                                                     <h2 className="text-lg font-normal">{user?.fullName}</h2>
@@ -153,7 +153,7 @@ const Dashboard = () => {
                     messages?.receiver?.fullName &&
                     <div className="w-[75%] h-[10%] bg-blue-100 rounded-full mt-5 mb-3 " >
                         <div className="flex  pb-4 mb-3 items-center">
-                            <div className="flex items-center justify-center ml-6 mt-1">
+                            <div className="flex items-center justify-center ml-3 mt-1">
                                 <img className="w-[45px] h-[45px] object-cover rounded-full border-2 border-gradient-to-r from-teal-400 to-blue-500 shadow-lg" src={img1} alt="user image"/>
                                 <div className="ml-4 w-[170px]">
                                     <h2 className="text-lg font-normal">{messages?.receiver?.fullName}</h2>
@@ -229,14 +229,14 @@ const Dashboard = () => {
 
             </div>
             <div className="w-[25%] h-screen bg-blue-100 shadow-lg overflow-scroll">
-                <div className="text-blue-600  text-xl px-8 py-8">Online Users</div>
+                <div className="text-blue-600  text-xl px-7 py-5">Online Users</div>
                 <div className="mx-8">
                     {
                         users.length > 0 ?
                             users.map(({ userId, user }) => {
                                 return (
                                     <div className="flex pb-4 mb-3 border-b border-b-gray-300 hover:bg-zinc-300">
-                                        <div className="cursor-pointer flex items-center" onClick={() => fetchMessages("new", user)}>
+                                        <div className="cursor-pointer flex items-center mt-2 ml-2" onClick={() => fetchMessages("new", user)}>
                                             <img className="w-[45px] h-[45px] object-cover rounded-full border-2 border-gradient-to-r from-teal-400 to-blue-500 shadow-lg" src={img1} alt="user image"/>
                                             <div className="mx-4">
                                                 <h2 className="text-lg font-normal">{user?.fullName}</h2>
