@@ -116,7 +116,7 @@ const Dashboard = () => {
         <div className="w-screen flex">
             <div className=" w-[25%] h-screen bg-blue-100 shadow-lg overflow-scroll" >
                 <div className="flex rounded-full mt-4 mx-6 my-5">
-                    <img className="rounded-[50%]" src={avatarUrl} alt="user image" width={50} height={50} />
+                    <img className="w-[60px] h-[60px] object-cover rounded-full border-4 border-gradient-to-r from-teal-400 to-blue-500 shadow-lg" src={avatarUrl} alt="user image" />
                     <div className="mx-3">
                         <h2 className="text-xl font-normal">{user?.fullName}</h2>
                         <p className="text-sm font-light">Admin</p>
@@ -135,7 +135,7 @@ const Dashboard = () => {
                                     return (
                                         <div className="flex pb-4 mb-3 border-b border-b-gray-300 hover:bg-zinc-300">
                                             <div className="cursor-pointer flex items-center" onClick={() => fetchMessages(conversationId, user)}>
-                                                <img className="rounded-[50%] ml-3 mt-3" src={img1} alt="user image" width={40} height={40} />
+                                                <img className="w-[39px] h-[39px] object-cover rounded-full border-1 border-gradient-to-r from-teal-400 to-blue-500 shadow-lg" src={img1} alt="user image"/>
                                                 <div className="mx-4">
                                                     <h2 className="text-lg font-normal">{user?.fullName}</h2>
                                                     <p className="text-sm font-light text-gray-600">{user?.email}</p>
@@ -154,7 +154,7 @@ const Dashboard = () => {
                     <div className="w-[75%] h-[10%] bg-blue-100 rounded-full mt-5 mb-3 " >
                         <div className="flex  pb-4 mb-3 items-center">
                             <div className="flex items-center justify-center ml-6 mt-1">
-                                <img className=" cursor-pointer rounded-full" src={img1} alt="user image" width={35} height={35} />
+                                <img className="w-[45px] h-[45px] object-cover rounded-full border-2 border-gradient-to-r from-teal-400 to-blue-500 shadow-lg" src={img1} alt="user image"/>
                                 <div className="ml-4 w-[170px]">
                                     <h2 className="text-lg font-normal">{messages?.receiver?.fullName}</h2>
                                     <p className="text-sm font-light text-gray-600">{messages?.receiver?.email}</p>
@@ -237,7 +237,7 @@ const Dashboard = () => {
                                 return (
                                     <div className="flex pb-4 mb-3 border-b border-b-gray-300 hover:bg-zinc-300">
                                         <div className="cursor-pointer flex items-center" onClick={() => fetchMessages("new", user)}>
-                                            <img className="rounded-[50%] ml-3 mt-3" src={img1} alt="user image" width={40} height={40} />
+                                            <img className="w-[45px] h-[45px] object-cover rounded-full border-2 border-gradient-to-r from-teal-400 to-blue-500 shadow-lg" src={img1} alt="user image"/>
                                             <div className="mx-4">
                                                 <h2 className="text-lg font-normal">{user?.fullName}</h2>
                                                 <p className="text-sm font-light text-gray-600">{user?.email}</p>
