@@ -21,7 +21,7 @@ const Dashboard = () => {
     // console.log("messages", messages);
 
     useEffect(() => {
-        setSocket(io('http://localhost:5050'));
+        setSocket(io('https://chatwithbuddy-chatappserver.onrender.com'));
     }, []);
 
     useEffect(() => {
@@ -68,6 +68,7 @@ const Dashboard = () => {
                 },
             });
             const result = await res.json();
+            // console.log(result)
             setUsers(result);
         }
         fetchUsers();

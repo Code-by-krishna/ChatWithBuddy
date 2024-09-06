@@ -6,7 +6,7 @@ class Alluser {
             const userId = req.params.userId;
             const users = await Users.find({ _id: { $ne: userId } });
             const usersData = Promise.all(users.map(async (user) => {
-                return { user: { email: user.email, fullName: user.fullName, receiverId: user._id } }
+                return { user: { email: user.email, fullName: user.fullName, receiverId: user._id} }
             }))
             return res.status(200).send(await usersData);
         } catch (error) {
