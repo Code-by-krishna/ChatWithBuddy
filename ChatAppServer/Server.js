@@ -92,6 +92,6 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 
 
-app.listen(port, () => {
+server.listen(port, () => {
   console.log(`server listen on ${port} port`)
 })
