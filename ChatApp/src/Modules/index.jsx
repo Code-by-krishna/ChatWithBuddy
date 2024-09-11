@@ -123,7 +123,7 @@ function Form({ isSignInPage = false }) {
               className="text-blue-600 cursor-pointer underline"
               onClick={() => navigate(`/users/${isSignInPage ? 'sign_up' : 'sign_in'}`)}
             >
-              {isSignInPage ? ' Sign Up' : ' Sign In'}
+              {isSignInPage ? 'Register' : 'Login'}
             </span>
           </p>
         </div>
