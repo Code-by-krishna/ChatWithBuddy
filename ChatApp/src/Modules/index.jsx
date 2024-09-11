@@ -111,7 +111,7 @@ function Form({ isSignInPage = false }) {
           )}
           {isSignInPage && (<h1 className=" bg-gray-400 text-white max-w-[80px] p-1 border border-black text-xl ">{localStorage.getItem('captcha')}</h1>)}
           <Button
-            label={isSignInPage ? 'Register' : 'Login'}
+            label={isSignInPage ? 'Login' : 'Register'}
             type="submit"
             className="py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300 transform hover:scale-105"
           />
