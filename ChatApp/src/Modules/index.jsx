@@ -121,9 +121,9 @@ function Form({ isSignInPage = false }) {
             {isSignInPage ? "Don't have an account?" : "Already have an account?"}
             <span
               className="text-blue-600 cursor-pointer underline"
-              onClick={() => navigate(`/users/${isSignInPage ? 'sign_up' : 'sign_in'}`)}
+              onClick={() => navigate(`/users/${isSignInPage ? 'Register' : 'Login'}`)}
             >
-              {isSignInPage ? 'Register' : 'Login'}
+              {isSignInPage ? ' Register' : ' Login'}
             </span>
           </p>
         </div>
