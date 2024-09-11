@@ -111,7 +111,7 @@ function Form({ isSignInPage = false }) {
           )}
           {isSignInPage && (<h1 className=" bg-gray-400 text-white max-w-[80px] p-1 border border-black text-xl ">{localStorage.getItem('captcha')}</h1>)}
           <Button
-            label={isSignInPage ? 'Sign In' : 'Sign Up'}
+            label={isSignInPage ? 'Register' : 'Login'}
             type="submit"
             className="py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 transition duration-300 transform hover:scale-105"
           />
@@ -121,9 +121,9 @@ function Form({ isSignInPage = false }) {
             {isSignInPage ? "Don't have an account?" : "Already have an account?"}
             <span
               className="text-blue-600 cursor-pointer underline"
-              onClick={() => navigate(`/users/${isSignInPage ? 'Register' : 'Login'}`)}
+              onClick={() => navigate(`/users/${isSignInPage ? 'sign_up' : 'sign_in'}`)}
             >
-              {isSignInPage ? ' Register' : ' Login'}
+              {isSignInPage ? ' Sign Up' : ' Sign In'}
             </span>
           </p>
         </div>
