@@ -54,10 +54,10 @@ function Form({ isSignInPage = false }) {
           </svg>
           <span className="text-3xl font-bold text-blue-900 ml-3">ChatBuddy</span>
         </div>
-        <p className="text-lg font-medium text-gray-700 mb-6 text-center">
+        <p className="text-lg font-medium text-gray-700 mb-3 text-center">
           {isSignInPage ? 'Sign in to your account' : 'Create a new account'}
         </p>
-        <form className="flex flex-col space-y-4 w-full max-w-xs" onSubmit={handleSubmit}>
+        <form className="flex flex-col space-y-3 w-full max-w-xs" onSubmit={handleSubmit}>
           {!isSignInPage && (
             <Input
               label="Full name:"
@@ -110,6 +110,7 @@ function Form({ isSignInPage = false }) {
             />
           )}
           {isSignInPage && (<h1 className=" bg-gray-400 text-white max-w-[80px] p-1 border border-black text-xl ">{localStorage.getItem('captcha')}</h1>)}
+          
           <Button
             label={isSignInPage ? 'Login' : 'Register'}
             type="submit"
@@ -126,6 +127,13 @@ function Form({ isSignInPage = false }) {
               {isSignInPage ? ' Sign Up' : ' Sign In'}
             </span>
           </p>
+          {isSignInPage && (<a
+              //href="#"
+              onClick={() => navigate('/verify-otp')}
+              className="block px-4 py-2 text-sm text-blue-600 cursor-pointer underline"
+            >
+            Verify OTP again
+            </a>)}
         </div>
       </div>
     </div>
