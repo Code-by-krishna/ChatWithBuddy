@@ -92,7 +92,7 @@ function Form({ isSignInPage = false }) {
               label="Phone Number:"
               type="tel"
               name="pnumber"
-              placeholder="Enter your phone number."
+              placeholder="Enter +919817271014 only"
               value={data.pnumber}
               onChange={(e) => setData({ ...data, pnumber: e.target.value })}
               className="transition-all duration-300 focus:ring-2 focus:ring-blue-500"
