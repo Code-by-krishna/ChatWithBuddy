@@ -144,6 +144,30 @@ class authanticateUser {
             return res.status(400).json({ message: 'Invalid OTP' });
         }
     }
+
+    static async EmailVerification(req, res, next) {
+        try {
+            const {email, password} = req.body;
+            const isExist = await Users.findOne({ email });
+            // console.log(isExist);
+            if(!isExist) {
+                return res.status(400).json({
+                    msg: 'Enter Correct Email',
+                })
+            }else{
+                const hashpassword = bcryptjs.hashSync(password,10); 
+                console.log(hashpassword);
+                await Users.updateOne({email: email},{
+                    $set: { password: hashpassword }
+                });
+                return res.status(200).json({
+                    msg: 'Password Updated Successfully!!'
+                })
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    }
 }
 
 
