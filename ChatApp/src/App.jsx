@@ -10,6 +10,7 @@ import EditProfile from './Components/EditProfile.jsx'
 import ShowProfile from './Components/ShowProfile.jsx'
 import PaymentGateway from './Components/PaymentGateway.jsx'
 import ContactUs from './Components/ContactUs.jsx'
+import ForgotPassword from './Components/ForgotPassword.jsx'
 import { Navigate, Route, Routes, redirect } from 'react-router-dom'
 
 const ProtectedRoute = ({ children, auth = false }) => {
@@ -78,6 +79,14 @@ function App() {
           element={
             <ProtectedRoute auth={true}>
               <ContactUs />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path='/forgot-password'
+          element={
+            <ProtectedRoute auth={false}>
+              <ForgotPassword/>
             </ProtectedRoute>
           }
         />

@@ -57,7 +57,7 @@ function Form({ isSignInPage = false }) {
         <p className="text-lg font-medium text-gray-700 mb-3 text-center">
           {isSignInPage ? 'Sign in to your account' : 'Create a new account'}
         </p>
-        <form className="flex flex-col space-y-3 w-full max-w-xs" onSubmit={handleSubmit}>
+        <form className="flex flex-col space-y-2 w-full max-w-xs" onSubmit={handleSubmit}>
           {!isSignInPage && (
             <Input
               label="Full name:"
@@ -109,8 +109,18 @@ function Form({ isSignInPage = false }) {
               className="transition-all duration-300 focus:ring-2 focus:ring-blue-500"
             />
           )}
+
+          <div className="flex">
           {isSignInPage && (<h1 className=" bg-gray-400 text-white max-w-[80px] p-1 border border-black text-xl ">{localStorage.getItem('captcha')}</h1>)}
-          
+
+          {isSignInPage && (<a
+              //href="#"
+              onClick={() => navigate('/forgot-password')}
+              className="px-2 py-1 text-sm ml-auto cursor-pointer text-blue-600 underline "
+            >
+              Forgot password?
+            </a>)}
+          </div>
           <Button
             label={isSignInPage ? 'Login' : 'Register'}
             type="submit"
