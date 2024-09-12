@@ -75,7 +75,7 @@ const ForgotPassword = () => {
                                 value={password}
                                 onChange={(e) => setPassword(e.target.value)}
                                 required
-                                placeholder="Enter your email"
+                                placeholder="Enter new password"
                                 className="w-full py-2 px-3 text-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
                             />
                         </div>
