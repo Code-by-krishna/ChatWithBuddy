@@ -35,7 +35,7 @@ class authanticateUser {
                     function sendOtp(phoneNumber, otp) {
                         client.messages.create({
                             body: `Your OTP code is ${otp}`,
-                            from: '+15418738877',
+                            from: '+17204086111',
                             to: phoneNumber,
                         })
                             .then(message => console.log(`OTP sent successfully! Message SID: ${message.sid}`))
